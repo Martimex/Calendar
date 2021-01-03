@@ -1,4 +1,3 @@
-
 const bod = document.body;
 
 bod.addEventListener('reload', () => {
