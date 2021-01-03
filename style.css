@@ -53,7 +53,6 @@ select > option
 
 .weekday
 {
-    /* we dont want to get this value inherited */
     border-bottom: 0.3em solid #c06363;
     border-left: 0.3em solid #c06363;
     border-radius: 0.3em;
@@ -66,7 +65,7 @@ select > option
     border: 0.12em solid #88888833;
     border-radius: 0.25em;
     text-align: center;
-    color: #8889;    /* 8889 color */
+    color: #8889;  
 }
 
 .flex-container, .flex-container2{
