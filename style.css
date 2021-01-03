@@ -1,0 +1,89 @@
+
+body
+{
+    background: linear-gradient(72deg, #63bac0, #969e51) repeat;
+}
+
+abbr
+{
+    border: 0.18em solid #be2116;
+    text-decoration: none;
+}
+
+#month
+{
+    border: 0.15em solid #444;
+    text-align: center;
+    background: #bdcc99f3;
+}
+
+select > option
+{
+    font-weight: 700;
+} 
+
+.date-box
+{
+    padding: 1em;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.8em;
+    background-image: linear-gradient(90deg, #d2858517, #eeddbb69, #d2858517) ;
+}
+
+.grid-container
+{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(7, 5.6em);
+    grid-template-rows: auto;
+    column-gap: 0.25em;
+    row-gap: 0.25em;
+    border: 0.25em solid #222;
+    align-items: center;
+    justify-content: center;
+}
+
+.day
+{
+    border: 0.15em solid #222;
+    border-radius: 0.25em;
+    text-align: center;
+}
+
+.weekday
+{
+    border-bottom: 0.3em solid #c06363;
+    border-left: 0.3em solid #c06363;
+    border-radius: 0.3em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.blank
+{
+    border: 0.12em solid #88888833;
+    border-radius: 0.25em;
+    text-align: center;
+    color: #8889;  
+}
+
+.flex-container, .flex-container2{
+    display: flex;
+    justify-content: center;
+}
+
+.change-year {
+    margin: 0.5em 1.5em 0 1.5em;
+    width: 4em;
+    height: 2em;
+    border: 0.18em solid #212122;
+}
+
+.change-year:nth-of-type(1) {
+    background-color: #b38179;
+}
+
+.change-year:nth-of-type(2) {
+    background-color:  #8cb68b;
+}
