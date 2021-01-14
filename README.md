@@ -8,3 +8,8 @@ years.
 
 - Calendar is responsive on mobile devices too; hovewer it works better with 
 'rotated screen' option turned on.
+
+[14.01.2021]
+Visual update. Added new themes to the calendar - these are: 
+'Light', 'Dark', 'Hacker' and 'Virtual'. User can choose one of them that 
+suits him the most.
