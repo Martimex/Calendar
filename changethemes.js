@@ -3,18 +3,13 @@ const lighttheme = document.querySelector(`.theme[data-theme="light"]`);
 const hackertheme = document.querySelector(`.theme[data-theme="hacker"]`);
 const virtualtheme = document.querySelector(`.theme[data-theme="virtual"]`);
 
-//const root = document.documentElement;
-//console.log(root);
-
-console.log(lighttheme);
-
 const body = document.querySelector('body');
 const calendar = document.querySelector('.grid-container'); 
 const yearbtn1 = document.querySelector('.change-year:nth-of-type(1)');
 const yearbtn2 = document.querySelector('.change-year:nth-of-type(2)');
 const selectcolor = document.querySelector('#month');
 const borderscolor = document.querySelectorAll('.weekday');
-const abbrcolor = document.querySelector('abbr'); // it's only one abbr - update that if something is changed
+const abbrcolor = document.querySelector('abbr');
 
 darktheme.addEventListener('click', () => {
     
@@ -26,7 +21,6 @@ darktheme.addEventListener('click', () => {
     selectcolor.style.setProperty('--select-bg', '#777');
     borderscolor.forEach(tile => tile.style.setProperty('--borders-bg', '#555'));
     abbrcolor.style.setProperty('--abbr-color', '#555');
-
 })
 
 lighttheme.addEventListener('click', () => {
