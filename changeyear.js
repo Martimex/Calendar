@@ -22,7 +22,7 @@ function previousYear() {
     document.querySelectorAll('#month option').forEach(option => {
         if(option.selected) return val = option.value;
     })
-    
+
     changeDaysCount(val);
 }
 
@@ -42,9 +42,8 @@ function followingYear() {
     document.querySelectorAll('#month option').forEach(option => {
         if(option.selected) return val = option.value;
     })
-    
-    changeDaysCount(val);
 
+    changeDaysCount(val);
 }
 
 ///////////////
@@ -104,3 +103,5 @@ function followingMonth()
     changeMonth(val);
     changeDaysCount(val);
 }
+
+
