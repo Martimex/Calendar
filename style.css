@@ -1,6 +1,5 @@
 body
 {
-    /*background: linear-gradient(72deg, #63bac0, #969e51) repeat; */
     background-image: var(--global-bg);
     color: var(--fontcolor);
 }
@@ -37,7 +36,6 @@ select > option
     font-weight: 600;
     text-align: center;
     font-size: 1.8em;
-    /*background-image: linear-gradient(90deg, #d2858517, #eeddbb69, #d2858517); */
     background-image: inherit;
 }
 
@@ -52,8 +50,6 @@ select > option
     border: 0.11em solid #222;
     align-items: center;
     justify-content: center;
-    /*background-image: linear-gradient(to right, #32bd78,  #32a1bd, #32bd78);*/
-    /*background: linear-gradient(72deg,#8d9e51d7, #63bac099 , #519e5899) repeat;*/
     background-image: var(--calendar-bg);
 }
 
@@ -66,7 +62,6 @@ select > option
 
 .weekday
 {
-    /* we dont want to get this value inherited */
     border-bottom: 0.3em solid var(--borders-bg);
     border-left: 0.3em solid var(--borders-bg);
     border-radius: 0.3em;
@@ -79,7 +74,7 @@ select > option
     border: 0.12em solid #88888833;
     border-radius: 0.25em;
     text-align: center;
-    color: #8889;    /* 8889 color */
+    color: #8889;    
 }
 
 .flex-container, .flex-container2{
