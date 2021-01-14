@@ -3,9 +3,6 @@ const prevYear = yearButtons.querySelector('button:nth-of-type(1)');
 const nextYear = yearButtons.querySelector('button:nth-of-type(2)');
 const thisYear = yearButtons.querySelector('.this-year');
 
-console.log(prevYear); 
-console.log(nextYear);
-
 prevYear.addEventListener('click', previousYear);
 nextYear.addEventListener('click', followingYear);
 
@@ -19,8 +16,6 @@ function previousYear() {
     let newYearval = `${whichyear-1}`;
     thisYear.dataset.year = newYearval;
     thisYear.textContent  = newYearval;
-    //do tych funkcji trzeba też wysłać bieżący miesiąc , żeby funckja na dole działała
-    console.log(whichyear);
    
     let val;
 
@@ -28,7 +23,6 @@ function previousYear() {
         if(option.selected) return val = option.value;
     })
 
-    console.log(val);
     changeDaysCount(val);
 }
 
@@ -42,8 +36,6 @@ function followingYear() {
     let newYearval = `${whichyear+1}`;
     thisYear.dataset.year = newYearval;
     thisYear.textContent  = newYearval;
-
-    console.log(whichyear);
    
     let val;
 
@@ -51,9 +43,7 @@ function followingYear() {
         if(option.selected) return val = option.value;
     })
 
-    console.log(val);
     changeDaysCount(val);
-
 }
 
 ///////////////
@@ -71,7 +61,6 @@ let monthVal = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 function previousMonth()
 {
     const dateMonth = document.querySelector('.this-month');
-    console.log(dateMonth);
 
     let currMonth = monthArr[0]; 
     let i=11;
@@ -83,33 +72,21 @@ function previousMonth()
 
     (i!==0)? currMonth = monthArr[i-1] : currMonth = monthArr[i];
     dateMonth.innerText = currMonth;
-    
-    console.log(currMonth);
 
     let val = monthVal[i-1];
-
-    console.log('jaki ten val:  '+val);
 
     (val === undefined)? val= 'jan' : '';
 
     changeMonth(val);
     changeDaysCount(val);
-
-    //to jest do poprawy
-    // + jak zmienisz tu January na wcześniejszy miesiąc to laguje strona
-
 }
 
 function followingMonth()
 {
     const dateMonth = document.querySelector('.this-month');
-    console.log(dateMonth);
 
     let currMonth = monthArr[0]; 
     let i=0;
-
-    console.log('text;  ' +dateMonth.textContent)
-
 
     while(dateMonth.innerText != monthArr[i])
     {
@@ -118,17 +95,12 @@ function followingMonth()
 
     (i!==11)? currMonth = monthArr[i+1] : currMonth = monthArr[i];
     dateMonth.innerText = currMonth;
-    
-    console.log(currMonth);
 
     let val = monthVal[i+1];
-
-    console.log('jaki ten val:  '+val);
 
     (val === undefined)? val= 'dec' : '';
 
     changeMonth(val);
-    //sel.value = val;
     changeDaysCount(val);
 }
 
