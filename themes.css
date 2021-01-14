@@ -1,0 +1,56 @@
+:root {
+    --global-bg: linear-gradient(to right, #32bd78bb,  #32a1bdbb, #32bd78bb);
+    --yearbutton1-color: #b38179;
+    --yearbutton2-color: #8cb68b;
+    --calendar-bg:  linear-gradient(90deg, #65c45828, #b2cc6c5d, #65c45828);
+    --fontcolor: #000;
+    --select-bg: #bdcc99f3;
+    --borders-bg: #c06363;
+    --abbr-color: #be2116;
+}
+
+.theme-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute; top:5%; right: 5%;
+    max-width: 25%;
+}
+
+.theme
+{
+    border: 0.12em solid #3330;
+    margin: 0.6em;
+    padding: 0.6em;
+    font-weight: 650;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.theme:nth-child(1):hover, .theme:nth-child(1):active
+{
+    background: #0e0d0d;
+    color: #eee;
+    border: 0.12em solid #0e0d0d;
+}
+
+.theme:nth-child(2):hover, .theme:nth-child(2):active
+{
+    background: #eee;
+    color: #333;
+    border: 0.12em solid #eee;
+}
+
+.theme:nth-child(3):hover, .theme:nth-child(3):active
+{
+    background: #000;
+    color: #30f530fb;
+    border: 0.12em solid #333;
+}
+
+.theme:nth-child(4):hover, .theme:nth-child(4):active
+{
+    background-image: linear-gradient(to bottom, #32bd78dd,  #32a1bddd, #32bd78dd);
+    color: #000;
+}
