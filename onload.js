@@ -1,5 +1,3 @@
-const reload = document.querySelector('#month');
-
 const bod = document.body;
 
 bod.addEventListener('reload', () => {
