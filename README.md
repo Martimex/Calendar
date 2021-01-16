@@ -13,3 +13,7 @@ years.
 Visual update. Added new themes to the calendar - these are: 
 'Light', 'Dark', 'Hacker' and 'Virtual'. User can choose one of them that 
 suits him the most.
+
+[16.01.2021]
+Adjusted the app performance for both rotated and not-rotated screens.
+Now calendar if fully responsive for all devices - at least I hope so :)
