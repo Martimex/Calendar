@@ -54,3 +54,21 @@
     background-image: linear-gradient(to bottom, #32bd78dd,  #32a1bddd, #32bd78dd);
     color: #000;
 }
+
+
+
+@media (orientation: portrait) and (max-width: 600px) /* normal state with theme extension*/
+{
+    .theme-box {
+        display:flex;
+        position: static;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        min-width: 100%;
+    }
+
+    .theme {
+        max-width: 20%;
+    }
+}
