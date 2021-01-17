@@ -36,7 +36,7 @@ function followingYear() {
     let newYearval = `${whichyear+1}`;
     thisYear.dataset.year = newYearval;
     thisYear.textContent  = newYearval;
-   
+    
     let val;
 
     document.querySelectorAll('#month option').forEach(option => {
@@ -51,6 +51,7 @@ function followingYear() {
 const MonthButtons = document.querySelector('.date-box > .flex-container2');
 const prevMonth = MonthButtons.querySelector('i:nth-of-type(1)');
 const nextMonth = MonthButtons.querySelector('i:nth-of-type(2)');
+const select = document.querySelector('select');
 
 prevMonth.addEventListener('click', previousMonth);
 nextMonth.addEventListener('click', followingMonth);
@@ -77,6 +78,9 @@ function previousMonth()
 
     (val === undefined)? val= 'jan' : '';
 
+    select.value = monthVal[i-1];
+    (select.value === '')? select.value= 'jan' : '';
+
     changeMonth(val);
     changeDaysCount(val);
 }
@@ -99,6 +103,9 @@ function followingMonth()
     let val = monthVal[i+1];
 
     (val === undefined)? val= 'dec' : '';
+
+    select.value = monthVal[i+1];
+    (select.value === '')? select.value= 'dec' : '';
 
     changeMonth(val);
     changeDaysCount(val);
