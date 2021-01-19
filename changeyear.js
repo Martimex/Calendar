@@ -1,21 +1,38 @@
 const yearButtons = document.querySelector('.date-box > .flex-container');
-const prevYear = yearButtons.querySelector('button:nth-of-type(1)');
-const nextYear = yearButtons.querySelector('button:nth-of-type(2)');
+
+const prevDecade = yearButtons.querySelector('i:nth-of-type(1)');
+const prevYear = yearButtons.querySelector('i:nth-of-type(2)');
+const nextYear = yearButtons.querySelector('i:nth-of-type(3)');
+const nextDecade = yearButtons.querySelector('i:nth-of-type(4)');
 const thisYear = yearButtons.querySelector('.this-year');
 
+
+const minYear = 1920;
+const maxYear = 2099;
+//console.log(prevYear); 
+//console.log(nextYear);
+
+prevDecade.addEventListener('click', previousYear);
 prevYear.addEventListener('click', previousYear);
 nextYear.addEventListener('click', followingYear);
+nextDecade.addEventListener('click', followingYear);
 
 function previousYear() {
+
+    //console.log(this);
 
     let whichyear = thisYear.dataset.year;
     whichyear = parseInt(whichyear);
 
-    if(whichyear<=1920) {return;}
+    if((whichyear<=minYear) && (this.dataset.number === '1')) {return;}
+    if((whichyear<=minYear+9) && (this.dataset.number === '10')) {return;}
 
-    let newYearval = `${whichyear-1}`;
+    let newYearval;
+    (this.dataset.number === '1')?  newYearval = `${whichyear-1}` : newYearval = `${whichyear-10}`; // for 2 btns
     thisYear.dataset.year = newYearval;
     thisYear.textContent  = newYearval;
+    //do tych funkcji trzeba też wysłać bieżący miesiąc , żeby funckja na dole działała
+    console.log(whichyear);
    
     let val;
 
@@ -23,6 +40,7 @@ function previousYear() {
         if(option.selected) return val = option.value;
     })
 
+    console.log(val);
     changeDaysCount(val);
 }
 
@@ -31,19 +49,25 @@ function followingYear() {
     let whichyear = thisYear.dataset.year;
     whichyear =parseInt(whichyear);
 
-    if(whichyear>=2099) {return;}
+    if((whichyear>=maxYear) && (this.dataset.number === '1')) {return;}
+    if((whichyear>=maxYear-9) && (this.dataset.number === '10')) {return;}
 
-    let newYearval = `${whichyear+1}`;
+    let newYearval;
+    (this.dataset.number === '1')?  newYearval = `${whichyear+1}` : newYearval = `${whichyear+10}`; // for 2 btns
     thisYear.dataset.year = newYearval;
     thisYear.textContent  = newYearval;
-    
+
+    console.log(whichyear);
+   
     let val;
 
     document.querySelectorAll('#month option').forEach(option => {
         if(option.selected) return val = option.value;
     })
 
+    console.log(val);
     changeDaysCount(val);
+
 }
 
 ///////////////
@@ -62,6 +86,7 @@ let monthVal = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 function previousMonth()
 {
     const dateMonth = document.querySelector('.this-month');
+    console.log(dateMonth);
 
     let currMonth = monthArr[0]; 
     let i=11;
@@ -73,8 +98,12 @@ function previousMonth()
 
     (i!==0)? currMonth = monthArr[i-1] : currMonth = monthArr[i];
     dateMonth.innerText = currMonth;
+    
+    console.log(currMonth);
 
     let val = monthVal[i-1];
+
+    console.log('jaki ten val:  '+val);
 
     (val === undefined)? val= 'jan' : '';
 
@@ -83,14 +112,22 @@ function previousMonth()
 
     changeMonth(val);
     changeDaysCount(val);
+
+    //to jest do poprawy
+    // + jak zmienisz tu January na wcześniejszy miesiąc to laguje strona
+
 }
 
 function followingMonth()
 {
     const dateMonth = document.querySelector('.this-month');
+    console.log(dateMonth);
 
     let currMonth = monthArr[0]; 
     let i=0;
+
+    console.log('text;  ' +dateMonth.textContent)
+
 
     while(dateMonth.innerText != monthArr[i])
     {
@@ -99,8 +136,12 @@ function followingMonth()
 
     (i!==11)? currMonth = monthArr[i+1] : currMonth = monthArr[i];
     dateMonth.innerText = currMonth;
+    
+    console.log(currMonth);
 
     let val = monthVal[i+1];
+
+    console.log('jaki ten val:  '+val);
 
     (val === undefined)? val= 'dec' : '';
 
@@ -108,7 +149,7 @@ function followingMonth()
     (select.value === '')? select.value= 'dec' : '';
 
     changeMonth(val);
+    //sel.value = val;
     changeDaysCount(val);
 }
-
 
