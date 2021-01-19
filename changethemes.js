@@ -67,7 +67,7 @@ hackertheme.addEventListener('click', () => {
 
 virtualtheme.addEventListener('click', () => {
 
-    body.style.setProperty('--global-bg', 'linear-gradient(to right, #32bd78bb,  #32a1bdbb, #32bd78bb)');
+    body.style.setProperty('--global-bg', 'linear-gradient(to right, #32bd7899,  #32a1bd99, #32bd7899)');  
     body.style.setProperty('--fontcolor','#000');
     calendar.style.setProperty('--calendar-bg','linear-gradient(90deg, #65c45828, #b2cc6c5d, #65c45828)');
     decadebtn1.style.setProperty('--decadebutton1-color', '#a27068');
