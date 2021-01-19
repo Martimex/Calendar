@@ -17,3 +17,9 @@ suits him the most.
 [16.01.2021]
 Adjusted the app performance for both rotated and not-rotated screens.
 Now calendar if fully responsive for all devices - at least I hope so :)
+
+[19.01.2021]
+Added new buttons to switch years more smoothly. Now you can switch decades
+with just one click!
+ - Additionally, all buttons are now replaced by icons for better user 
+ experience. 
