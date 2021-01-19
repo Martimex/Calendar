@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='style.css'>
-    <link rel='stylesheet' href='fonts/css/fontello.css'>
+    <link rel='stylesheet' href='fonts-1/css/fontello.css'>
     <link rel='stylesheet' href='themes.css'>
     <title>Calendar</title>
 </head>
@@ -24,6 +24,7 @@
 
         <label for='month'> Select month: </label>
         <select id='month'>
+            <!--<option value='none'>Choose...</option> -->
             <option value='jan'>January</option>
             <option value='feb'>February</option>
             <option value='mar'>March</option>
@@ -46,9 +47,11 @@
             </div>
 
             <div class ='flex-container'>
-                <button class='change-year'> </button>
+                <i class='icon-angle-double-left' data-number='10'></i> <!--icon-angle-double-left-->
+                <i class='icon-left-open-mini' data-number='1'> </i> <!--icon-left-open-mini-->
                 <div class ='this-year' data-year='2021'>2021</div>
-                <button class='change-year'> </button>
+                <i class='icon-right-open-mini' data-number='1'> </i> <!--icon-right-open-mini-->
+                <i class='icon-angle-double-right' data-number='10'></i> <!--icon-angle-double-right-->
             </div>
         </div>
 
