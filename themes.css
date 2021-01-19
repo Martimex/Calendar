@@ -1,8 +1,11 @@
 :root {
-    --global-bg: linear-gradient(to right, #32bd78bb,  #32a1bdbb, #32bd78bb);
-    --yearbutton1-color: #b38179;
-    --yearbutton2-color: #8cb68b;
+    --global-bg: linear-gradient(to right, #32bd7899,  #32a1bd99, #32bd7899);
+    --decadebutton1-color: #a2708a;
+    --yearbutton1-color: #b3819b;
+    --yearbutton2-color: #8cb6ad;
+    --decadebutton2-color: #7ba58c;
     --calendar-bg:  linear-gradient(90deg, #65c45828, #b2cc6c5d, #65c45828);
+    --calendar-daytile-border: #222;
     --fontcolor: #000;
     --select-bg: #bdcc99f3;
     --borders-bg: #c06363;
