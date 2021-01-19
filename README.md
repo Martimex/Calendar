@@ -23,3 +23,7 @@ Added new buttons to switch years more smoothly. Now you can switch decades
 with just one click!
  - Additionally, all buttons are now replaced by icons for better user 
  experience. 
+ - 'Previous month' icon clicked when the month is January now goes back
+   to the December of previous Year.
+ - 'Next month' icon clicked when the month is December now goes ahead
+   to the January of next Year.
