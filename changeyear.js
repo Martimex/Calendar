@@ -96,7 +96,17 @@ function previousMonth()
         i--;
     }
 
-    (i!==0)? currMonth = monthArr[i-1] : currMonth = monthArr[i];
+    if (i!==0) {currMonth = monthArr[i-1];}  // albo miesiąc-1 
+    else if ((i===0) && (parseInt(thisYear.dataset.year) > minYear))
+    {
+        const newYear = parseInt(thisYear.dataset.year)-1;
+
+        currMonth = monthArr[11];
+        thisYear.dataset.year = newYear;
+        thisYear.innerText = newYear;
+    } // albo grudzień nowego roku
+    else {return;} // próbujesz przekroczyć maksymalną datę, którą obsługuje kalendarz
+ 
     dateMonth.innerText = currMonth;
     
     console.log(currMonth);
@@ -105,10 +115,10 @@ function previousMonth()
 
     console.log('jaki ten val:  '+val);
 
-    (val === undefined)? val= 'jan' : '';
+    (val === undefined)? val= 'dec' : '';
 
     select.value = monthVal[i-1];
-    (select.value === '')? select.value= 'jan' : '';
+    (select.value === '')? select.value= 'dec' : '';
 
     changeMonth(val);
     changeDaysCount(val);
@@ -134,7 +144,17 @@ function followingMonth()
         i++;
     }
 
-    (i!==11)? currMonth = monthArr[i+1] : currMonth = monthArr[i];
+    if (i!==11) {currMonth = monthArr[i+1];}  // albo miesiąc+1 
+    else if ((i===11) && (parseInt(thisYear.dataset.year) < maxYear))
+    {
+        const newYear = parseInt(thisYear.dataset.year)+1;
+
+        currMonth = monthArr[0];
+        thisYear.dataset.year = newYear;
+        thisYear.innerText = newYear;
+    } // albo styczeń nowego roku
+    else {return;} // próbujesz przekroczyć maksymalną datę, którą obsługuje kalendarz
+
     dateMonth.innerText = currMonth;
     
     console.log(currMonth);
@@ -143,10 +163,10 @@ function followingMonth()
 
     console.log('jaki ten val:  '+val);
 
-    (val === undefined)? val= 'dec' : '';
+    (val === undefined)? val= 'jan' : '';
 
     select.value = monthVal[i+1];
-    (select.value === '')? select.value= 'dec' : '';
+    (select.value === '')? select.value= 'jan' : '';
 
     changeMonth(val);
     //sel.value = val;
