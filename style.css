@@ -30,6 +30,12 @@ select > option
     font-weight: 700;
 } 
 
+.this-year 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .date-box
 {
@@ -59,7 +65,7 @@ select > option
 
 .day
 {
-    border: 0.15em solid #222;
+    border: 0.15em solid var(--calendar-daytile-border);
     border-radius: 0.25em;
     text-align: center;
 }
@@ -87,20 +93,27 @@ select > option
     justify-content: center;
 }
 
-.change-year {
-    margin: 0.5em 1.5em 0 1.5em;
+.flex-container > i {
+    margin: 0.3em 0.3em 0 0.2em;
     width: 4em;
     height: 2em;
-    border: 0.18em solid #212122;
     cursor: pointer;
 }
 
-.change-year:nth-of-type(1) {
-    background-color: var(--yearbutton1-color);
+.flex-container > i:nth-of-type(1) {
+    color: var(--decadebutton1-color);
 }
 
-.change-year:nth-of-type(2) {
-    background-color:  var(--yearbutton2-color);
+.flex-container > i:nth-of-type(2) {
+    color: var(--yearbutton1-color);
+}
+
+.flex-container > i:nth-of-type(3) {
+    color:  var(--yearbutton2-color);
+}
+
+.flex-container > i:nth-of-type(4) {
+    color:  var(--decadebutton2-color);
 }
 
 
